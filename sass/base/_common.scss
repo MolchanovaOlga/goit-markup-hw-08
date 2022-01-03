@@ -1,0 +1,38 @@
+button {
+  cursor: pointer;
+}
+
+.container {
+  width: 320px;
+  // width: 480px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  @media screen and (min-width: 480px) {
+    width: 480px;
+  }
+  @media screen and (min-width: 768px) {
+    width: 768px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 1200px;
+  }
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  background-color: var(--main-white);
+  color: var(--main-black);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  max-height: auto;
+}
