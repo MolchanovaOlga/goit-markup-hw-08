@@ -20,11 +20,14 @@ header {
 }
 
 .list-navigation {
+  display: none;
+  @media screen and (min-width: 768px) {
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
   display: flex;
   padding: 32px 0;
+  }
 }
 
 .list-navigation__item:not(:last-child) {
@@ -38,15 +41,31 @@ header {
 }
 
 .contacts-list {
+  display: none;
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
-  display: flex;
   padding: 32px 0;
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    display: block;
+    font-size: 12px;
+    line-height: 1.17;
+    margin-left: auto;
+    }
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    font-size: 14px;
+    line-height: 1.14;
+    margin-left: auto;
+  }
 }
 
-.header__list {
-  margin-left: auto;
+.contacts-list__item {
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+  &:not(:first-child) {
+    margin-top: 10px;
+  }
+}
 }
 
 .contacts-list__link {
@@ -56,12 +75,18 @@ header {
 }
 
 .contacts-list__link--tel {
-  margin-left: 50px;
-  align-items: center;
+  @media screen and (min-width: 1200px) {
+  margin-left: 30px;
+  }
 }
 
 .contacts-list__icon-mail {
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    margin-right: 8px;
+  }
+  @media screen and (min-width: 1200px) {
   margin-right: 10px;
+  }
 }
 
 .contacts-list__link--mail:hover,
@@ -73,7 +98,12 @@ header {
 }
 
 .contacts-list__icon-tel {
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    margin-right: 8px;
+  }
+  @media screen and (min-width: 1200px) {
   margin-right: 10px;
+  }
 }
 
 .contacts-list__link--tel:hover,
